@@ -81,12 +81,15 @@ def get_all():
 external_stylesheets = ['https://codepen.io/chriddyp/pen/dZVMbK.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
+app.title = 'test'
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
 df = get_all()
 
 fig = px.bar(df, x="year", y="loan", color="degree_type", barmode="group")
+
 
 app.layout = html.Div(children=[
     html.H1(children='A Continuous Charity test'),
@@ -103,4 +106,4 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server
+    app.run_server()
