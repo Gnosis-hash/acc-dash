@@ -82,7 +82,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/dZVMbK.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
-app.title = 'test'
+app.title = 'ACC Annual Dashboard'
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
